@@ -6,7 +6,7 @@ class CsvUploadsController < ApplicationController
     if params[:file].present?
       begin
         file = params[:file]
-        if file.content_type == 'text/csv'
+        if file.content_type == "text/csv"
           # TODO: Process the CSV file
           flash[:notice] = "CSV file uploaded successfully"
           redirect_to csv_uploads_path
