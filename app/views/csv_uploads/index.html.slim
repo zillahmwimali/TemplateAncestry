@@ -1,0 +1,17 @@
+.max-w-5xl.mx-auto.py-4.sm:px-4.lg:px-4
+  .bg-white.shadow.sm:rounded-lg
+    .px-4.py-5.sm:p-6
+      h3.text-lg.font-medium.leading-6.text-gray-900 Upload CSV File
+      .mt-2.max-w-xl.text-sm.text-gray-500
+        p Upload your CSV file to create or update forms.
+      .mt-5
+
+        = form_with url: csv_uploads_path, multipart: true, class: "space-y-4" do |f|
+        
+          .space-y-2
+            = f.label :file, "Choose a CSV File", class: "block text-sm font-medium text-gray-700"
+            = f.file_field :file, accept: ".csv", class: "block w-full border-gray-300 rounded-md  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          .space-y-2.flex.justify-end
+            = f.submit "Upload", class: "inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          
+          
