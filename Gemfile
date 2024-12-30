@@ -29,7 +29,7 @@ gem "solid_queue"
 gem "solid_cable"
 
 # Use slim templating engine
-gem "slim-rails", "~> 3.6"
+gem "slim-rails", "~> 3.7"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
